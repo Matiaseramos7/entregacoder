@@ -1,0 +1,25 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.itemBar {
+    text-align: center;
+    width: 100%;
+}
+.itemBar a:hover{
+    color: black;
+}
+
+.active {
+    color: Black;
+}
+
+.userSection {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
