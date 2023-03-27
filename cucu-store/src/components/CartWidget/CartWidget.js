@@ -1,11 +1,15 @@
-import cart from './assets/cart.svg'
+import * as Iconos from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
-const CartWidget = ({count}) => {
+
+const CartWidget = () => {
+
+    
     return ( 
-        <div className='w-10 h-10 mr-6'>
-            <img src={cart} alt='cart-wdiget'/>
-            <p>{count}</p>
-        </div>
+        <button className='hover:text-orange-300 w-30 h-30 mr-6 text-white flex flex-row justify-center items-center py-5 px-2'>
+            <Link to={`/cart/${1}`} className="text-4xl" ><Iconos.FiShoppingCart /></Link>
+            <p className="ml-2 mr-3 text-base">{0}</p>
+        </button>
     )
 }
 
