@@ -13,7 +13,6 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         getProductById(itemId).then(response => {
             setProduct(response)
-            
         }).catch(error => {
             console.log(error)
         })
@@ -21,8 +20,8 @@ const ItemDetailContainer = () => {
 
 
     return(
-        <div className='flex flex-row justify-center items-center w-full' >
-            <ItemDetail {...product} />
+        <div className='ItemDetailContainer' >
+            <ItemDetail  {...product} />
         </div>
     )
 }

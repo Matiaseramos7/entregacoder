@@ -2,20 +2,22 @@ import * as images from './pages/Images'
 const products = [{
     id: '1',
     name: 'SKMEI Reloj Digital Pulcera',
-    price: 1000.00,
+    price: 10000.00,
     marca: 'SKMEI',
     src: images.IMG1 ,
     description: 'Reloj Tactico Militar Bluetooth Digital 1251 Sumergible 50 metros Deportivo',
+    category: 'pulcera',
     stock: 20,
     count: 0
 },
 {
     id: '2',
     name: 'Reloj Tommy Hilfiger Layla Rosé',
-    price: 1000.00,
+    price: 10000.00,
     marca: 'Tommy Hilfiger',
     src: images.IMG2 ,
     description: 'Reloj elegante de la marca Tommy Hilfiger',
+    category: 'pulcera',
     stock: 15,
     count: 0
 },
@@ -26,6 +28,7 @@ const products = [{
     marca: 'New Gent',
     src: images.IMG3 ,
     description: 'Este reloj Swatch New Gent artístico conmemora el cuadro más famoso de Piet Mondrian, Composition en Rouge, Bleu et Blanc II.',
+    category: 'pulcera',
     stock: 25,
     count: 0
 },
@@ -36,6 +39,7 @@ const products = [{
     marca: 'SKMEI',
     src: images.IMG1 ,
     description: 'Reloj Tactico Militar Bluetooth Digital 1251 Sumergible 50 metros Deportivo',
+    category: 'pulcera',
     stock: 20,
     count: 0
 },
@@ -46,6 +50,7 @@ const products = [{
     marca: 'Tommy Hilfiger',
     src: images.IMG2 ,
     description: 'Reloj elegante de la marca Tommy Hilfiger',
+    category: 'pulcera',
     stock: 15,
     count: 0
 },
@@ -56,6 +61,7 @@ const products = [{
     marca: 'New Gent',
     src: images.IMG3 ,
     description: 'Este reloj Swatch New Gent artístico conmemora el cuadro más famoso de Piet Mondrian, Composition en Rouge, Bleu et Blanc II.',
+    category: 'pulcera',
     stock: 25,
     count: 0
 }

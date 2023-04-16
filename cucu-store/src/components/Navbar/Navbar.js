@@ -1,39 +1,20 @@
-import './Navbar.css';
-import logo from './assets/Logo-Cucu.svg';
-import CartWidget from '../CartWidget/CartWidget';
-import Login from '../Login/Login';
-import { Link } from 'react-router-dom'
-import Search from '../Search/Search';
-const Navbar = () => {
-    
-    return (
-       <header>
-            <nav className="Navbar mt-0 mb-3 mr-5 ml-5 py-2 px-2">
-                <div className='flex flex-column item-center justify-center text-orange-300'>
-                <Link to='/'> <img src={logo} className="w-30 h-10" alt='logo'/></Link>
-                    <div className='flex flex-row w-1/5'>
-                <ul className='flex flex-row items-center justify-center text-xl'>
-                    <li className='mr-5'>
-                    <Link to='/' className='text-amber-600 text-white'>Inicio</Link>
-                    </li>
-                    <li className='mr-5 text-orange-300'>
-                    <Link to='/catalog'  className="hover:text-white" >Catalogo</Link>
-                    </li>
-                    <li className='text-orange-300'>
-                        <Link to='/about' className="hover:text-white">Empresa</Link>
-                    </li>
-                </ul>
-                </div>         
-                </div>
-                
-                <div className='flex flex-row justify-center items-center py-2 px-4 mr-5'>
-                    <Search></Search>
-                    <CartWidget/>
-                    <Login name={'Usuario'}></Login>
-                </div>
-            </nav>
-        </header>
-    )
+import CartWidget from '../CartWidget/CartWidget'
+import './Navbar.css'
+import logo from './assets/Logo-Cucu.svg'
+import { Link, NavLink } from 'react-router-dom'
+
+const NavBar = () => {
+  return (
+    <nav className="NavBar" >
+        <Link to='/' className='text-white'><img src={logo} className='w-32 h-32' alt='logo'/></Link>
+        <div className="Categories">
+          <NavLink to='/category/SKEI' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}><p className='text-white hover:text-amber-300 mr-10'>SKEI</p></NavLink>
+          <NavLink to='/category/Tommy Hilfiger' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}><p className='text-white hover:text-amber-300 mr-10'>Tommy Hilfiger</p></NavLink>
+          <NavLink to='/category/New Gent' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}><p className='text-white hover:text-amber-300'>New Gent</p></NavLink>
+        </div>
+        <CartWidget />
+    </nav>
+  )
 }
 
-export default Navbar
+export default NavBar

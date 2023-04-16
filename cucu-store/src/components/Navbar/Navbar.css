@@ -1,25 +1,46 @@
-.Navbar {
+.NavBar {
     display: flex;
-    justify-content: space-between;
+    background: transparent;
+    justify-content: space-around;
     align-items: center;
-}
-.itemBar {
-    text-align: center;
-    width: 100%;
-}
-.itemBar a:hover{
-    color: black;
-}
-
-.active {
-    color: Black;
-}
-
-.userSection {
-    width: 200px;
-    height: 100px;
+    height: 60px;
+    background: rgb(97, 115, 150);
+  }
+  
+  .Categories {
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+
+  
+  .ActiveOption {
+    /* color: #8C30F5; */
+    text-decoration: none;
+    border-radius: 25;
+    margin: 0 50px;
+    /* TODO */
+    width: auto;
+    padding: 12px;
+    font-size: 15px;
+    background: gray;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
     justify-content: center;
     align-items: center;
-}
+    text-decoration: none;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+  }
+  
+  .NavLink {
+    color :rgb(255, 0, 0)
+  }
