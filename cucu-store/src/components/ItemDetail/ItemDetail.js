@@ -1,22 +1,23 @@
 import './ItemDetail.css'
-// import ItemCount from '../ItemCount/ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 import { useCart } from '../../context/CartContext'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const ItemDetail = ({ id, name, src, category, description, price,  marca }) => {
+const ItemDetail = ({ id, name, src, category, description, price,  marca,stock }) => {
     
-    const { isInCart } = useCart()
+ const { addItem, isInCart } = useCart()
 
-    /* addItem, 
+   
+      
     const handleOnAdd = (quantity) => {
         const productToAdd = {
             id, name, price, quantity
         }
         addItem(productToAdd)
-    } */
+    } 
 
     return (
-        <article className="CardItem">
+        <article className="flex flex-col justify-center items-center bg-orange-100 text-amber-700 p-2 rounded-lg">
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}
@@ -40,14 +41,14 @@ const ItemDetail = ({ id, name, src, category, description, price,  marca }) => 
                 </p>
             </section>           
             <footer className='ItemFooter'>
-                
-                  {/*  isInCart(id) ? (
-                        <Link to='/cart'>Terminar compra</Link>
+               { 
+                   isInCart(id) ? (
+                        <Link to='/cart' className='bg-orange-400 p-2 m-2 text-white hover:bg-green-400 rounded'>Terminar compra</Link>
                     ) : (
                         <ItemCount onAdd={handleOnAdd} stock={stock} />
-                    ) */}
-
-                    {isInCart(id) && <p>El item con id: {id} esta en el carrito</p>}
+                    )
+                }
+                   
             </footer>
         </article>
     )

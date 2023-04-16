@@ -1,4 +1,3 @@
-import './ItemDetailContainer.css'
 import { useState, useEffect } from 'react'
 import { getProductById } from '../../asyncMock'
 import ItemDetail from '../ItemDetail/ItemDetail'
@@ -20,7 +19,7 @@ const ItemDetailContainer = () => {
 
 
     return(
-        <div className='ItemDetailContainer' >
+        <div className='grid grid-cols-3 justify-center items-center w-10/12 h-auto' >
             <ItemDetail  {...product} />
         </div>
     )
