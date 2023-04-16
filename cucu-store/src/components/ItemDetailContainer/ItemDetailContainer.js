@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
 
 
     return(
-        <div className='grid grid-cols-3 justify-center items-center w-10/12 h-auto' >
+        <div className='w-10/15 h-auto' >
             <ItemDetail  {...product} />
         </div>
     )

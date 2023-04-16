@@ -17,7 +17,7 @@ const ItemDetail = ({ id, name, src, category, description, price,  marca,stock 
     } 
 
     return (
-        <article className="flex flex-col justify-center items-center bg-orange-100 text-amber-700 p-2 rounded-lg">
+        <article className="flex flex-col justify-center items-center bg-orange-100 text-amber-700 p-2 rounded-lg w-full" >
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}
@@ -40,7 +40,7 @@ const ItemDetail = ({ id, name, src, category, description, price,  marca,stock 
                     Precio: {price}
                 </p>
             </section>           
-            <footer className='ItemFooter'>
+            <footer className='flex flex-col items-center justify-center'>
                { 
                    isInCart(id) ? (
                         <Link to='/cart' className='bg-orange-400 p-2 m-2 text-white hover:bg-green-400 rounded'>Terminar compra</Link>
