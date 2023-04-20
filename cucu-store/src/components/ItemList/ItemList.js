@@ -2,9 +2,9 @@ import './ItemList.css'
 import Item from '../Item/Item'
 
 const ItemList = ({products}) => {
-   
+    console.log(products)
     return(
-        <div className='w-4/5 h-auto grid grid-cols-3'>
+        <div className='grid grid-cols-3 justify-center items-center m-auto'>
             {products.map(prod => <Item key={prod.id} {...prod}/>)}
         </div>    
     )

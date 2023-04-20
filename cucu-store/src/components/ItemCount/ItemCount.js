@@ -1,8 +1,7 @@
 import './ItemCount.css'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
-const ItemCount = ({stock = 0, initial = 1, id})=> {
+const ItemCount = ({stock = 0, initial = 1, onAdd})=> {
    const [quantity, setQuantity] = useState(initial)
 
    const increment = () => {
@@ -17,17 +16,15 @@ const ItemCount = ({stock = 0, initial = 1, id})=> {
        }     
    }
 
-   
-
    return(
-       <div className='flex flex-col justify-center items-center'>          
-            <div className='flex flex-row'>
-                <button className="hover:bg-blue-600 bg-orange-600 text-white w-10 h-10 py-2 px-3 mt-0.5 mr-3" onClick={decrement}>-</button>
-                <h4 className='text-2x1 mr-5 ml-4 '>{quantity}</h4>
-                <button className="hover:bg-blue-600 bg-orange-600 text-white w-10 h-10 py-2 px-3 mt-0.5 mr-3" onClick={increment}>+</button>
+       <div className='flex flex-col'>          
+            <div className='flex flex-row justify-center items-center content-center'>
+                <button className="bg-orange-400 text-white mb-2 p-2" onClick={decrement}>-</button>
+                <h4 className=' text-black mb-2 p-2'>{quantity}</h4>
+                <button className="bg-orange-400 text-white mb-2 p-2" onClick={increment}>+</button>
             </div>
             <div>
-                <Link to='/' className="border border-orange-600 hover:border-blue-600 hover:bg-blue-600 hover:text-white bg-white text-orange-600 py-2 px-3 mt-0.5 mr-2">Agregar al carrito</Link>
+                <button className="bg-orange-400 text-white p-2 hover:bg-green-400" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
             </div>
        </div>
    )
