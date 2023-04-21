@@ -6,7 +6,7 @@ Este es un proyecto de ejemplo de e-commerce sobre venta de relojes desarrollada
 
 Para empezar a trabajar con este proyecto, es necesario seguir los siguientes pasos:
 
-> *git clone https://github.com/tu-usuario/tienda-relojes.git*
+> *git clone https://github.com/naraehumano1989/React.git*
 
 # 1- Instalar las dependencias del proyecto:
 
@@ -36,4 +36,4 @@ Este proyecto fue desarrollado utilizando las siguientes tecnologías:
 > - Tailwind: Framework de css con el cual se aplica algunos estilos dentro de la aplicacion. 
 
 # Licencia
-Este proyecto está bajo la licencia MIT.
+Este proyecto es de practica para el curso de @CoderHouse React.
