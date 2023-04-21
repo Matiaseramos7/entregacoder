@@ -11,6 +11,7 @@ Para empezar a trabajar con este proyecto, es necesario seguir los siguientes pa
 # 1- Instalar las dependencias del proyecto:
 
 > cd cucu-store
+
 > npm install
 
 # 2- Iniciar la aplicación:
