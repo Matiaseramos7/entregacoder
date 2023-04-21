@@ -75,7 +75,7 @@ const Checkout = () => {
     if(loading) {
         return (
             <div>
-                <h1 className="text-white">Se esta generando su orden...</h1>
+                <h1 className="text-white mb-10">Se esta generando su orden...</h1>
             </div>
         )
     }
@@ -83,15 +83,15 @@ const Checkout = () => {
     if(orderId) {
         return (
             <div>
-                <h1 className="text-white">El id de su compra es: <span className="text-green-700">{orderId}</span></h1>
+                <h1 className="text-white mb10">El id de su compra es: <span className="text-green-700">{orderId}</span></h1>
             </div>
         )
     }
 
     return (
-        <div className="text-amber-300">
-            <h1>Checkout</h1>
-            <h2>Ingrese sus datos</h2>
+        <div className="bg-white">
+            <h1 className="text-5xl text-amber-700">Checkout</h1>
+            <h2 className="text-3xl text-amber-700">Ingrese sus datos</h2>
             <ContactForm onConfirm={createOrder} lassName="bg-orange-300 hover:bg-teal-400 text-white p-2 mt-5"/>
         </div>
     )

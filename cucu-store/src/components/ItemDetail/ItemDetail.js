@@ -7,15 +7,18 @@ import { useNotification } from '../../notification/NotificationService'
 const ItemDetail = ({ id, name, src, category, description, price,  marca,stock }) => {
     
 
- const { addItem, isInCart } = useCart()
-const { setNotification } = useNotification()
-  const handleOnAdd = (quantity) => {
-     const productToAdd = {
-         id, name, price, quantity
-     }
-     addItem(productToAdd)
-     setNotification('success', `Se agrego correctamente ${quantity} ${name}`)
- } 
+    const { addItem, isInCart, getProductQuantity } = useCart()
+    const { setNotification } = useNotification()
+
+    const handleOnAdd = (quantity) => {
+        const productToAdd = {
+            id, name, price, quantity, stock
+        }
+        addItem(productToAdd)
+        setNotification('success', `Se agrego correctamente ${quantity} ${name}`)
+    }
+
+    const productQuantity = getProductQuantity(id)
 
     return (
         <article className="flex flex-col justify-center items-center bg-orange-100 text-amber-700 p-2 rounded-lg w-3/4 m-auto" >
@@ -46,7 +49,7 @@ const { setNotification } = useNotification()
                    isInCart(id) ? (
                         <Link to='/cart' className='bg-orange-400 p-2 m-2 text-white hover:bg-green-400 rounded'>Terminar compra</Link>
                     ) : (
-                        <ItemCount  onAdd={handleOnAdd} stock={stock}/>
+                        <ItemCount  onAdd={handleOnAdd} stock={stock} initial={productQuantity || 1}/>
                     ) 
                 }
                    

@@ -3,12 +3,13 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import {getDoc, doc } from 'firebase/firestore'
 import {db} from '../../services/firebase/FirebaseConfig'
-
+import { useNotification } from '../../notification/NotificationService'
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([])
-    const [loading, setLoading] = useState(true)
-
+    const [loading, setLoading] = useState(false)
+    
     const { itemId } = useParams()
+    const { setNotification } = useNotification()
 
     useEffect(() => {
         setLoading(true)
@@ -23,13 +24,13 @@ const ItemDetailContainer = () => {
                 setProduct(productAdapted)
             })
             .catch(error => {
-                console.log(error)
+                setNotification('error', 'mensaje: ' + error)
             })
             .finally(() => {
                 setLoading(false)
             })
 
-    }, [itemId])
+    }, [itemId, setNotification])
 
     if(loading) {
         return (

@@ -6,7 +6,7 @@ const Item = ({id, name, src, price }) => {
 
     
     return (
-        <article className="flex flex-col justify-center items-center text-black bg-teal-100 w-2/3 h-auto mb-10 rounded rounded-lg p-5 ">
+        <article className="flex flex-col justify-center items-center text-black bg-teal-100 w-3/4 h-60 mb-10 rounded rounded-lg p-5 m-5">
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}

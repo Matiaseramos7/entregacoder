@@ -5,8 +5,8 @@ const Notification = ({ type, message }) => {
       position: 'absolute',
       top: 100, 
       right: 50,
-      backgroundColor: type === 'success' ? 'green' : 'yellow',
-      color: type === 'success' ? 'white' : 'black',
+      backgroundColor: type === 'success' ? 'green' : 'red',
+      color: 'white',
       padding: '10px 20px 10px 20px',
       borderRadius: 10
     }
@@ -32,7 +32,7 @@ export const NotificationProvider = ({ children }) => {
         setNotificationData({ type, text })
         setTimeout(() => {
           setNotification({ type, text: ''})
-        }, 3000)
+        }, 2000)
       }
 
     return (
