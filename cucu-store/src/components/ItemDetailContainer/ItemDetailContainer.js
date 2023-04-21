@@ -12,10 +12,12 @@ const ItemDetailContainer = () => {
     const { setNotification } = useNotification()
 
     useEffect(() => {
-        setLoading(true)
+        
 
         const productRef = doc(db, 'products', itemId)
-
+        if(productRef==="" || productRef === undefined){
+            setLoading(true)
+        }
         getDoc(productRef)
             .then(snapshot => {
                 console.log(snapshot)
